@@ -9,7 +9,7 @@ export function Header() {
   const linkStyles = 'text-action-sm font-medium transition-colors hover:text-blue-200';
 
   return(
-    <header className="fixed top-0 z-1 w-full border-b border-white/10 bg-gray-500 backdrop-blur supports-[backdrop-filters]:bg-background/60">
+    <header className="fixed top-0 z-10 w-full border-b border-white/10 bg-gray-500 backdrop-blur supports-[backdrop-filters]:bg-background/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Image src="/logo.svg" width={24} height={24} alt="Imagem da logo" />

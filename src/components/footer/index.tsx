@@ -7,7 +7,7 @@ export function Footer(){
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between md:flex-row gap-8 py-8">
           <Link href="/">
-            <Image src="/logo.svg" width={24} height={24} alt="Imagem da logo" />
+            <Image src="/logo.png" width={116} height={32} alt="Imagem da logo" />
           </Link>
 
 

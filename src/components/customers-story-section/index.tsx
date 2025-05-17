@@ -22,7 +22,7 @@ const customerStories = [
 
 export function CustomerStorySection(){
   return(
-    <section className="relative container py-8 md:py-10">
+    <section className="relative container py-8 md:py-32">
       <div className="flex flex-col items-center gap-12">
         <h2 className={`${ptSansCaption.className} text-heading-xl text-gray-100`}>Quem utiliza, aprova!</h2>
       

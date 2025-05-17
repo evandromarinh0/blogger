@@ -10,7 +10,7 @@ const ptSansCaption = PT_Sans_Caption({ subsets: ['latin'], weight: '700' });
 
 export function FeatureSection(){
   return(
-    <section className="container bg-gray-700 grid gap-6 md:grid-cols-2 pt-8 pb-8 md:py-10">
+    <section className="container bg-gray-700 grid gap-6 md:grid-cols-2 pt-8 pb-8 md:pt-20 md:pb-32">
       <div className="flex flex-col gap-4 rounded-lg p-6 bg-gray-500 md:p-12">
         <span className="text-body-tag text-blue-200 bg-blue-400 px-2 py-1 w-fit rounded-sm uppercase">Simples</span>
         <h2 className={`${ptSansCaption.className} text-gray-100 text-heading-lg`}>Crie um catálogo de produtos online em poucos minutos</h2>

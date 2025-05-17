@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function HeroSection(){
   return(
-    <section className="container h-screen relative flex items-center justify-center mt-[65px] bg-gray-500">
+    <section className="container h-screen relative flex items-center justify-center mt-[65px] bg-gray-700">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[20rem] md:h-[36rem] items-center">
         <div className="flex flex-col items-center justify-center gap-4 md:items-start lg:items-start">
           <h1 className="text-gray-100 text-heading-hg">Venda seus produtos afiliados em um único lugar</h1>
@@ -36,7 +36,7 @@ export function HeroSection(){
         </div>
 
         <div className="relative h-[20rem] hidden md:h-full order-frist md:order-last items-center justify-center md:flex lg:flex">
-          <Image className="h-full w-auto object-contain" src="/hero-section.png" width={200} height={400} alt="Ilustração com ícones de loja, preço e sacola" />
+          <Image className="h-full w-auto object-contain" src="/hero-section.png" width={471} height={491} alt="Ilustração com ícones de loja, preço e sacola" />
         </div>
       </div>
     </section>

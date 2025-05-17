@@ -5,8 +5,8 @@ const ptSansCaption = PT_Sans_Caption({ subsets: ['latin'], weight: '700' });
 
 export function SupportSection(){
   return(
-    <section className="pb-8 md:py-10 bg-[url('/support-section.png')] bg-[position:center_center] bg-cover bg-no-repeat w-full h-556">
-      <div className="container flex flex-col items-center gap-12 py-32">
+    <section className="pb-8 bg-[url('/support-section.png')] bg-[position:center_center] bg-cover bg-no-repeat w-full h-556">
+      <div className="container flex flex-col items-center gap-12 pt-12 md:py-32">
         <h2 className={`${ptSansCaption.className} text-balance text-center text-heading-xl text-gray-100`}>Sua loja de afiliados, simples, do jeito que deveria ser</h2>
 
         <div className="grid gap-6 md:grid-cols-3">

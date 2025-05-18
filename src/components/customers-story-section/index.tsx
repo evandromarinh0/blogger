@@ -24,7 +24,7 @@ export function CustomerStorySection(){
   return(
     <section className="relative container py-20 md:py-32">
       <div className="flex flex-col items-center gap-12">
-        <h2 className={`${ptSansCaption.className} text-heading-xl text-gray-100`}>Quem utiliza, aprova!</h2>
+        <h2 className={`${ptSansCaption.className} text-heading-md md:text-heading-xl text-gray-100`}>Quem utiliza, aprova!</h2>
       
         <div className="grid gap-8 md:grid-cols-2">
           {customerStories.map((customer) => (

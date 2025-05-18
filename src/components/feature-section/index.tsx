@@ -27,7 +27,7 @@ export function FeatureSection(){
             <span className="text-body-tag text-blue-200 bg-blue-400 px-2 py-1 w-fit rounded-sm uppercase">Personalizável</span>
             <h2 className={`${ptSansCaption.className} text-gray-100 text-heading-lg`}>Tenha uma loja online personalizada com a cara da sua marca</h2>
 
-            <Button className="w-fit rounded-full hidden mt-4 md:mt-auto md:flex" asChild> 
+            <Button className="w-fit rounded-full hidden mt-4 md:mt-auto md:flex text-white" asChild> 
               <Link href="/criar-loja">
                 Criar loja grátis
                 <ArrowRight />
@@ -40,7 +40,7 @@ export function FeatureSection(){
               <Image src="/feature-section.png" width={440} height={327} alt="Imagem de features" className="object-cover w-full" />
             </div>
 
-            <Button className="w-full gap-2 rounded-full mt-4 md:mt-auto md:hidden" asChild> 
+            <Button className="w-full gap-2 rounded-full mt-4 md:mt-auto md:hidden text-white" asChild> 
               <Link href="/criar-loja">
                 Criar loja grátis
                 <ArrowRight />

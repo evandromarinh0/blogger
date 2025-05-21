@@ -1,6 +1,13 @@
 import { PostCard } from "@/components/post-card";
+import { allPosts } from "contentlayer/generated";
 
 export default function BlogPage(){
+  const posts = allPosts;
+
+  if(!posts) {
+    return <></>
+  }
+
   return(
     <div className="flex flex-col py-24 flex-grow h-full bg-gray-700">
       <header className="pb-8 md:pb-14">
@@ -14,9 +21,14 @@ export default function BlogPage(){
       </header>
 
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <PostCard title="Transformando seu negócio em uma loja virtual" description="Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site.Set é a solução perfeita para você. Criar uma loja virtual de sucesso nunca foi tão fácil. Com nossa plataforma intuitiva, você pode criar um site profissional para sua loja em minutos, sem precisar de conhecimentos técnicos." author={{ avatar: '/customer-01.png', name: 'Aspen Dokidis' }} date="20/12/2024" imageUrl="/assets/first-post.png" slug="/transformando" />
-        <PostCard title="Transformando seu negócio em uma loja virtual" description="Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site.Set é a solução perfeita para você. Criar uma loja virtual de sucesso nunca foi tão fácil. Com nossa plataforma intuitiva, você pode criar um site profissional para sua loja em minutos, sem precisar de conhecimentos técnicos." author={{ avatar: '/customer-01.png', name: 'Aspen Dokidis' }} date="20/12/2024" imageUrl="/assets/first-post.png" slug="/transformando" />
-        <PostCard title="Transformando seu negócio em uma loja virtual" description="Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site.Set é a solução perfeita para você. Criar uma loja virtual de sucesso nunca foi tão fácil. Com nossa plataforma intuitiva, você pode criar um site profissional para sua loja em minutos, sem precisar de conhecimentos técnicos." author={{ avatar: '/customer-01.png', name: 'Aspen Dokidis' }} date="20/12/2024" imageUrl="/assets/first-post.png" slug="/transformando" />
+        {posts.map((post) => {
+          const formattedDate = new Date(post.date).toLocaleDateString("pt-BR");
+          const trimmedUrl = post.image.trim();
+
+          return(
+          <PostCard key={post._id} title={post.title} description={post.description} author={{ avatar: post.author.avatar, name: post.author.name }} date={formattedDate} imageUrl={trimmedUrl} slug={post.slug} />
+          )
+        })}
       </div>
     </div>
   );

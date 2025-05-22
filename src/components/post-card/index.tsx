@@ -17,7 +17,7 @@ interface PostCardProps {
 
 export function PostCard(props: PostCardProps){
   return(
-    <Link href={`/blog/`} className="w-full max-w-2xl rounded-3xl border-[1px] border-gray-400 bg-gray-600 overflow-hidden transition-all duration-300 hover:border-[1px] hover:border-blue-300">
+    <Link href={`/blog/${props.slug}`} className="w-full max-w-2xl rounded-3xl border-[1px] border-gray-400 bg-gray-600 overflow-hidden transition-all duration-300 hover:border-[1px] hover:border-blue-300">
       <div className="p-2 rounded-md overflow-hidden">
         <div className="relative bg-slate-400 rounded-3xl">
           <div className="absolute -top-2 -right-2 px-3 py-1 bg-gray-600 rounded-l-xl">

@@ -1,4 +1,3 @@
-import { Store } from "lucide-react";
 import { PT_Sans_Caption } from "next/font/google";
 import Image from "next/image";
 
@@ -45,9 +44,7 @@ export function CustomerStorySection(){
           ))}
         </div>
         
-        <div className="absolute -bottom-8 h-16 w-16 rounded-full bg-cyan-300 flex justify-center items-center">
-          <Store className="h-8 w-8 text-cyan-200" />
-        </div>
+        
       </div>
     </section>
   );

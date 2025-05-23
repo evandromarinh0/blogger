@@ -5,12 +5,34 @@ import Image from "next/image";
 import Link from "next/link";
 import { Markdown } from "@/components/markdown";
 import { CallToAction } from "@/components/call-to-action";
+import { Button } from "@/components/ui/button";
+import { Linkedin, Slack, Twitter } from "lucide-react";
 
 export default function PostPage(){
   const router = useRouter();
   const slug = router.query.slug as string;
   const post = allPosts.find((post) => post.slug?.toLowerCase().includes(slug?.toLowerCase()));
   const formattedPostDate = new Date(post?.date ?? 0).toLocaleDateString("pt-BR");
+
+  function HandleClick(social: string){
+    const url = encodeURIComponent('https://blogger-flame-tau.vercel.app/blog/second-post');
+    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+    const slackUrl = `https://www.slack.com/share?url=${url}`;
+    const xUrl = `https://www.x.com/intent/tweet?url=${url}`;
+
+    if(social === 'LinkedIn'){
+      window.open(linkedInUrl, '_blank', 'noopener,noreferrer');
+    }
+
+    if(social === 'Slack'){
+      window.open(slackUrl, '_blank', 'noopener,noreferrer');
+    }
+
+    if(social === 'X'){
+      window.open(xUrl, '_blank', 'noopener,noreferrer');
+    }
+
+  };
 
   if(!post){
     return <></>
@@ -59,6 +81,14 @@ export default function PostPage(){
             <Markdown content={post.body.raw} />
           </div>
         </article>
+
+        <div className="flex flex-col gap-2">
+          <h2 className="text-gray-100 text-heading-xs mb-3">Compartilhar</h2>
+
+          <Button variant="ghost" className="flex items-center justify-start w-[223px] text-action-sm text-gray-100 border-gray-400 border hover:border-blue-300" onClick={() => HandleClick("LinkedIn")}><Linkedin />LinkedIn</Button>
+          <Button variant="ghost" className="flex items-center justify-start w-[223px] text-action-sm text-gray-100 border-gray-400 border hover:border-blue-300" onClick={() => HandleClick("Slack")}><Slack />Slack</Button>
+          <Button variant="ghost" className="flex items-center justify-start w-[223px] text-action-sm text-gray-100 border-gray-400 border hover:border-blue-300" onClick={() => HandleClick("X")}><Twitter />X</Button>
+        </div>
       </div>
 
     </main>
